@@ -18,7 +18,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link to="/team">
               <button className="bg-[#0A1628] text-white px-6 py-3 text-[13px] font-semibold inline-flex items-center gap-2">
-                Meet Our Partners <ArrowRight size={15} />
+                Our Founder <ArrowRight size={15} />
               </button>
             </Link>
           </div>

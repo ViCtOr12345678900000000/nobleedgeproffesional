@@ -37,14 +37,7 @@ export const leaders = [
     bio: "Trained at KPMG Nigeria. Former Group Accountant, Trans-Media & Scount Global. Former Internal Auditor & Head of Banking Operations, Zenith Bank Plc. Former Senior Consultant, J.K. Randle. Led Board Appraisal & Corporate Governance reviews for Union Bank, GTBank, Sterling Bank, Mainstreet Bank, GT Assurance, Kakawa Discount House, Law Union & Rock and CrusaderSterling Pensions.",
     highlight: "Top-100 Men & Women in Finance 2006 — International Biographical Centre, Cambridge"
   },
-  {
-    name: "Mr. Jeremiah Ukachukwu Imo",
-    role: "Client Service Partner",
-    initials: "JI",
-    creds: "B.Tech Mathematics & Computer Science • PGD Management • ACA, ICAN",
-    bio: "Started at Microspeed Computers as Systems Manager. Rose to Branch Operations Manager at Manny Bank / Fidelity Bank Plc (post-2006 merger). General Manager, Finance & Admin, Ok Batola Oil & Gas. Trained at Stephen & Co. and Ukariwe Eke & Co. Admitted as Partner, Noble Edge in 2011.",
-    highlight: "Client Service Partner — owns delivery, quality & client relationships"
-  }
+
 ];
 
 export const values = [
