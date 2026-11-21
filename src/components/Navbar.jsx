@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, BookOpen } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
@@ -37,7 +37,6 @@ export default function Navbar() {
               Resource Center
             </button>
           </Link>
-          {/* CHANGED: Was Book Consultation, now Download Brochure */}
           <a href="https://drive.google.com/uc?export=download&id=YOUR_ID_HERE">
             <button className="bg-[#C5A880] text-black px-4 py-2.5 text-[13px] font-medium flex items-center gap-2 hover:bg-[#B89A6E] transition">
               <Download size={15} /> Download Brochure
@@ -50,10 +49,20 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* MOBILE MENU - FIXED */}
       {open && (
-        <div className="lg:hidden flex flex-col gap-4 px-6 pb-6 pt-2 bg-white border-t">
-          {links.map(l => <Link key={l.to} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>)}
-          {/* CHANGED: Mobile menu too */}
+        <div className="lg:hidden flex flex-col gap-4 px-6 pb-6 pt-4 bg-white border-t">
+          {links.map(l => (
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="text-[15px] font-medium">
+              {l.label}
+            </Link>
+          ))}
+
+          {/* ADDED: Resource Center now on mobile */}
+          <Link to="/insights" onClick={() => setOpen(false)} className="border-2 border-black px-4 py-3 text-center text-[14px] font-medium flex items-center justify-center gap-2">
+            <BookOpen size={16} /> Resource Center
+          </Link>
+
           <a href="https://drive.google.com/uc?export=download&id=YOUR_ID_HERE" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
             <Download size={15} /> Download Brochure
           </a>
