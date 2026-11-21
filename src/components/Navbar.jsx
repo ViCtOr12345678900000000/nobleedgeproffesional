@@ -59,13 +59,14 @@ export default function Navbar() {
           ))}
 
           {/* ADDED: Resource Center now on mobile */}
+          <a href="https://drive.google.com/uc?export=download&id=YOUR_ID_HERE" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
+            <Download size={15} /> Download Brochure
+          </a>
           <Link to="/insights" onClick={() => setOpen(false)} className="border-2 border-black px-4 py-3 text-center text-[14px] font-medium flex items-center justify-center gap-2">
             <BookOpen size={16} /> Resource Center
           </Link>
 
-          <a href="https://drive.google.com/uc?export=download&id=YOUR_ID_HERE" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
-            <Download size={15} /> Download Brochure
-          </a>
+
         </div>
       )}
     </nav>
