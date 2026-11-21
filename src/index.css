@@ -1,8 +1,35 @@
+/* src/index.css */
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Manrope", "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
+  color: #0a1628;
+  background: #ffffff;
 }
 
 .font-serif-luxury {
-  font-family: 'Playfair Display', serif;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+h1, h2 {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+button, a {
+  font-family: "Manrope", "Inter", sans-serif;
+  letter-spacing: -0.01em;
 }

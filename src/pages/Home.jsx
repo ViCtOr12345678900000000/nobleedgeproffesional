@@ -14,16 +14,7 @@ export default function Home() {
       <WhyUs />
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[11px] font-bold tracking-[0.3em] text-[#C5A880] text-center">
-            TRUSTED IN BOARDROOMS
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mt-5">
-            {clients.map((c) => (
-              <span key={c} className="border px-3 py-2 text-[12px] font-medium text-slate-600">
-                {c}
-              </span>
-            ))}
-          </div>
+          
           <div className="text-center mt-8">
             <Link to="/team">
               <button className="bg-[#0A1628] text-white px-6 py-3 text-[13px] font-semibold inline-flex items-center gap-2">
