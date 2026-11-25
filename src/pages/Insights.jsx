@@ -70,7 +70,7 @@ export default function Insights() {
             <p className="text-[14px] text-slate-600 mt-2 flex-1 leading-relaxed">{p.desc}</p>
             <a href={p.file} download={p.fileName} className="mt-5">
               <button className="w-full bg-[#0A1628] text-white px-4 py-3 text-[13px] font-semibold flex items-center justify-center gap-2 hover:bg-black transition">
-                <Download size={15} /> Download PDF
+                <Download size={15} /> Download Full Text
               </button>
             </a>
 
