@@ -11,8 +11,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-4">
           <div className="border p-5 flex gap-3"><MapPin className="text-[#C5A880]"/><div><h3 className="font-bold">Office</h3><p className="text-[14px] text-slate-600">Victoria Island, Lagos, Nigeria</p></div></div>
-          <div className="border p-5 flex gap-3"><Mail className="text-[#C5A880]"/><div><h3 className="font-bold">Email</h3><p className="text-[14px] text-slate-600">hello@nobleedge.ng</p></div></div>
-          <div className="border p-5 flex gap-3"><Phone className="text-[#C5A880]"/><div><h3 className="font-bold">Phone</h3><p className="text-[14px] text-slate-600">+234 (0) 800 000 0000 — replace with real number</p></div></div>
+          <div className="border p-5 flex gap-3"><Mail className="text-[#C5A880]"/><div><h3 className="font-bold">Email</h3><p className="text-[14px] text-slate-600">fornoble2@gmail.com</p></div></div>
+          <div className="border p-5 flex gap-3"><Phone className="text-[#C5A880]"/><div><h3 className="font-bold">Phone</h3><p className="text-[14px] text-slate-600">+234 803 511 6452</p></div></div>
           <div className="bg-[#FFFBF0] p-5"><h3 className="font-bold">What happens next?</h3><p className="text-[13px] text-slate-600 mt-2 leading-relaxed">1. We review your request • 2. Partner responds • 3. Confidential conversation • 4. Engagement Planning Memorandum (EPM) before any fieldwork.</p></div>
         </div>
         <form onSubmit={submit} className="lg:col-span-3 border p-6 space-y-4">
