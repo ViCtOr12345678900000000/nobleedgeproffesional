@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -8,6 +7,7 @@ import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Insights from "./pages/Insights";
+import DownloadPage from "./pages/Download";
 
 export default function App() {
   return (
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="/insights" element={<Insights />} />
         <Route path="/resources" element={<Insights />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/download" element={<DownloadPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

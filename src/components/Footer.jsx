@@ -32,11 +32,11 @@ export default function Footer() {
                 Book a Consultation <ArrowRight size={15} />
               </button>
             </Link>
-            <a href="https://drive.google.com/uc?export=download&id=YOUR_ID_HERE">
-              <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
-                <Download size={15} /> Download Brochure
-              </button>
-            </a>
+<Link to="/download">
+  <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
+    <Download size={15} /> Download Brochure
+  </button>
+</Link>
           </div>
         </div>
       </div>
