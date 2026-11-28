@@ -30,7 +30,7 @@ export default function Team() {
       <div className="max-w-3xl mx-auto px-6 py-12 ">
         <div className="border p-7 flex flex-col rounded-4xl">
           <div className="flex items-center gap-4  ">
-            <div className="w-[72px] h-[72px] bg-[#0A1628] rounded-full text-[#E9C46A] flex items-center justify-center font-serif-luxury text-[24px] font-bold">
+            <div className="w-[72px] h-[72px] bg-[#0A1628] md:rounded-full text-[#E9C46A] flex items-center justify-center font-serif-luxury text-[24px] font-bold">
               {founder.initials}
             </div>
             <div>
@@ -57,7 +57,7 @@ export default function Team() {
 
       {/* CTA */}
       <div className="max-w-7xl mx-auto px-6 pb-14">
-        <div className="bg-[#0A1628] rounded-full text-white p-7 flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
+        <div className="bg-[#0A1628] md:rounded-full text-white p-7 flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
           <div>
             <h3 className="font-serif-luxury text-[24px] font-bold">Work with the founder directly.</h3>
             <p className="text-slate-300 text-[14px] mt-1">Quick founder response — no layers, no hand-offs.</p>
