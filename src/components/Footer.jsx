@@ -34,7 +34,7 @@ export default function Footer() {
             </Link>
 <Link to="/download">
   <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
-    <Download size={15} /> Download Brochure
+    <Download size={15} /> Downloads
   </button>
 </Link>
           </div>
@@ -62,15 +62,15 @@ export default function Footer() {
             <div className="space-y-2.5 mt-5 text-[13px] text-slate-300">
               <p className="flex items-start gap-2">
                 <MapPin size={15} className="text-[#E9C46A] mt-0.5 shrink-0" />
-                Victoria Island, Lagos, Nigeria
+                Lagos Mainland, Nigeria
               </p>
               <p className="flex items-center gap-2">
                 <Mail size={15} className="text-[#E9C46A] shrink-0" />
-                hello@nobleedge.ng
+                fornoble2@gmail.com
               </p>
               <p className="flex items-center gap-2">
                 <Phone size={15} className="text-[#E9C46A] shrink-0" />
-                +234 (0) 800 000 0000
+                +234 8035116452
               </p>
             </div>
           </div>
