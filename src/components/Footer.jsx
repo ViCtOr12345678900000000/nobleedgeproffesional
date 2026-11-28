@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* TOP GOLD CTA */}
-      <div className="bg-[#E9C46A]  text-black">
+      <div className="bg-[#E9C46A] text-black">
         <div className="w-full mx-auto px-6 py-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div>
             <h2 className="font-serif-luxury text-[36px] sm:text-[44px] font-bold leading-tight">
@@ -32,17 +32,17 @@ export default function Footer() {
                 Book a Consultation <ArrowRight size={15} />
               </button>
             </Link>
-<Link to="/download">
-  <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
-    <Download size={15} /> Downloads
-  </button>
-</Link>
+            <Link to="/download">
+              <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
+                <Download size={15} /> Downloads
+              </button>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* BOTTOM NAVY FOOTER */}
-      <div className="bg-[#0A1628]  text-white">
+      <div className="bg-[#0A1628] text-white">
         <div className="w-full mx-auto px-6 py-12 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Brand */}
@@ -81,8 +81,8 @@ export default function Footer() {
             <ul className="space-y-2.5 text-[13px] text-slate-400">
               <li><Link to="/services" className="hover:text-[#E9C46A]">Services</Link></li>
               <li><Link to="/about" className="hover:text-[#E9C46A]">About</Link></li>
-              <li><Link to="/resources" className="hover:text-[#E9C46A]">Insights</Link></li>
-              <li><Link to="/contact" className="hover:text-[#E9C46A]">Careers</Link></li>
+              <li><Link to="/insights" className="hover:text-[#E9C46A]">Insights</Link></li>
+              <li><Link to="/contact" className="hover:text-[#E9C46A]">Contact</Link></li>
             </ul>
           </div>
 
@@ -128,9 +128,8 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-[12px] text-slate-500">
             <p>© 2026 Noble Edge Professional Services. All rights reserved.</p>
             <p className="flex gap-2">
-              <Link to="/privacy" className="hover:text-white">Privacy</Link> ·
-              <Link to="/terms" className="hover:text-white">Terms</Link> ·
-              <Link to="/cookies" className="hover:text-white">Cookies</Link>
+              <Link to="/terms" className="hover:text-white">Privacy</Link> ·
+              <Link to="/terms" className="hover:text-white">Terms</Link>
             </p>
           </div>
         </div>

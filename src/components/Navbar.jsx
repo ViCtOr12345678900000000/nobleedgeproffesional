@@ -37,9 +37,9 @@ export default function Navbar() {
               Resource Center
             </button>
           </Link>
-<Link to="/download" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
-  <Download size={15} /> Downloads
-</Link>
+          <Link to="/download" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
+            <Download size={15} /> Downloads
+          </Link>
         </div>
 
         <button onClick={() => setOpen(!open)} className="lg:hidden">
@@ -56,17 +56,14 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* ADDED: Resource Center now on mobile */}
-<Link to="/download">
-  <button className="bg-[#C5A880] text-black px-4 py-2.5 text-[13px] font-medium flex items-center gap-2 hover:bg-[#B89A6E] transition">
-    <Download size={15} /> Downloads
-  </button>
-</Link>
+          <Link to="/download" onClick={() => setOpen(false)}>
+            <button className="w-full bg-[#C5A880] text-black px-4 py-2.5 text-[13px] font-medium flex items-center justify-center gap-2 hover:bg-[#B89A6E] transition">
+              <Download size={15} /> Downloads
+            </button>
+          </Link>
           <Link to="/insights" onClick={() => setOpen(false)} className="border-2 border-black px-4 py-3 text-center text-[14px] font-medium flex items-center justify-center gap-2">
             <BookOpen size={16} /> Resource Centers
           </Link>
-
-
         </div>
       )}
     </nav>
