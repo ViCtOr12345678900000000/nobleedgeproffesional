@@ -28,12 +28,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
             <Link to="/contact">
-              <button className="bg-[#0A1628] text-white text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black transition">
+              <button className="bg-[#0A1628] text-white text-[13px] font-semibold px-5 py-3 flex items-center gap-2 rounded-full hover:scale-102 duration-200 hover:bg-black transition">
                 Book a Consultation <ArrowRight size={15} />
               </button>
             </Link>
             <Link to="/download">
-              <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black hover:text-white transition">
+              <button className="border border-black text-black text-[13px] font-semibold px-5 py-3 flex items-center gap-2 hover:bg-black rounded-full hover:scale-102 duration-200 hover:text-white transition">
                 <Download size={15} /> Downloads
               </button>
             </Link>

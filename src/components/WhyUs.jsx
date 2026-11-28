@@ -33,12 +33,12 @@ export default function WhyUs() {
         </div>
 
         {/* Right - 4 Value Cards */}
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4 ">
           {values.map((v, i) => {
             const Icon = icons[i];
             return (
-              <div key={v.title} className="bg-white border border-slate-200 p-5 hover:-translate-y-1 transition">
-                <div className="w-[38px] h-[38px] bg-[#E9C46A] flex items-center justify-center">
+              <div key={v.title} className="bg-white border shadow-xl rounded-3xl border-zinc-200 p-5 hover:-translate-y-1 transition">
+                <div className="w-[38px] h-[38px] bg-[#E9C46A] flex items-center justify-center rounded-full">
                   <Icon size={20} className="text-black" />
                 </div>
                 <h3 className="font-bold text-[16px] mt-3 text-[#0A1628]">{v.title}</h3>

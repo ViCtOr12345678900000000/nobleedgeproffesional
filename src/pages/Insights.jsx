@@ -49,17 +49,17 @@ export default function Insights() {
           </p>
           {/* FIXED: Now downloads your Company Profile file from your site */}
           <a href="/docs/Profile_of_the_Organization_1.docx" download="Profile_of_the_Organization_1.docx">
-            <button className="mt-6 bg-[#E9C46A] text-black px-5 py-3 text-[13px] font-semibold flex items-center gap-2">
+            <button className="mt-6 bg-[#E9C46A] text-black px-5 py-3 text-[13px] font-semibold flex items-center gap-2 hover:bg-white rounded-full hover:cursor-pointer hover:scale-105 duration-200">
               <Download size={15} /> Download Company Profile
             </button>
           </a>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         {posts.map((p) => (
-          <div key={p.title} className="border p-6 flex flex-col hover:shadow-lg transition">
-            <div className="w-[36px] h-[36px] bg-[#E9C46A] flex items-center justify-center">
+          <div key={p.title} className="border border-mauve-500/50 shadow-2xl bg-[#0A1628]/30 p-6 flex flex-col hover:shadow-lg transition rounded-2xl">
+            <div className="w-[36px] h-[36px] bg-[#E9C46A] flex items-center justify-center rounded-full">
               <FileText size={18} />
             </div>
             <p className="text-[10px] font-bold tracking-[0.2em] text-[#C5A880] mt-4">{p.tag}</p>
@@ -69,7 +69,7 @@ export default function Insights() {
             </p>
             <p className="text-[14px] text-slate-600 mt-2 flex-1 leading-relaxed">{p.desc}</p>
             <a href={p.file} download={p.fileName} className="mt-5">
-              <button className="w-full bg-[#0A1628] text-white px-4 py-3 text-[13px] font-semibold flex items-center justify-center gap-2 hover:bg-black transition">
+              <button className="w-full bg-[#0A1628] text-white px-4 py-3 text-[13px] font-semibold flex items-center justify-center gap-2 hover:bg-black transitionhover:bg-white rounded-full hover:cursor-pointer hover:scale-105 duration-200">
                 <Download size={15} /> Download Full Text
               </button>
             </a>

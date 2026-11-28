@@ -33,11 +33,11 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link to="/insights">
-            <button className="border-2 border-black px-4 py-2.5 text-[13px] font-medium hover:bg-black hover:text-white transition">
+            <button className="border border-mauve-500/50 px-4 py-2.5 text-[13px] font-medium rounded-full  hover:bg-black hover:text-white transition hover:scale-107 hover:cursor-pointer hover:">
               Resource Center
             </button>
           </Link>
-          <Link to="/download" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 text-center font-medium flex items-center justify-center gap-2">
+          <Link to="/download" onClick={() => setOpen(false)} className="bg-[#C5A880] px-4 py-3 border border-mauve-500/50 shadow-2xl text-center font-medium flex items-center justify-center gap-2 rounded-full hover:bg-white ">
             <Download size={15} /> Downloads
           </Link>
         </div>
