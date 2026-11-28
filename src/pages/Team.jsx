@@ -1,70 +1,121 @@
-// src/pages/Team.jsx
-import { leaders } from "../data/content";
-import { Award, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GraduationCap, Briefcase, Award, ArrowRight, Mail } from "lucide-react";
+import { leaders } from "../data/content";
 
 export default function Team() {
-  // Show ONLY the founder - not all partners
-  const founder = leaders.find((l) => 
-    l.role.toLowerCase().includes("founder") || 
-    l.role.toLowerCase().includes("chief executive") ||
-    l.role.toLowerCase().includes("ceo")
-  ) || leaders[0];
+  const founder = leaders[0];
 
   return (
     <div className="bg-white">
-      {/* Header - Changed to Founder */}
-      <div className="bg-[#0A1628] text-white py-16">
+      {/* HERO */}
+      <div className="bg-[#0A1628] text-white py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[11px] font-bold tracking-[0.3em] text-[#E9C46A]">OUR FOUNDER</p>
-          <h1 className="font-serif-luxury text-[42px] sm:text-[56px] font-bold mt-3">
-            Our Founder.
+          <p className="text-[11px] font-bold tracking-[0.3em] text-[#C5A880]">OUR TEAM</p>
+          <h1 className="font-serif-luxury text-[38px] sm:text-[52px] font-bold mt-3 leading-tight">
+            Led by experience.<br />
+            <span className="italic text-[#C5A880]">Built on trust.</span>
           </h1>
-          <p className="text-slate-300 mt-3 max-w-[600px]">
-            Led by the founder, backed by a large pool of local & international collaborating associates — carefully selected for knowledge, integrity & objectivity.
-          </p>
         </div>
       </div>
 
-      {/* Founder Card - Single, Centered */}
-      <div className="max-w-3xl mx-auto px-6 py-12 ">
-        <div className="border p-7 flex flex-col rounded-4xl">
-          <div className="flex items-center gap-4  ">
-            <div className="w-[72px] h-[72px] bg-[#0A1628] md:rounded-full text-[#E9C46A] flex items-center justify-center font-serif-luxury text-[24px] font-bold">
-              {founder.initials}
-            </div>
-            <div>
-              <h2 className="font-serif-luxury text-[28px] font-bold leading-tight">{founder.name}</h2>
-              <p className="text-[13px] font-bold text-[#C5A880] mt-1">{founder.role}</p>
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-[360px_1fr] gap-10 lg:gap-14 items-start">
+
+          {/* LEFT — ROUNDED PROFILE CARD */}
+          <div className="lg:sticky lg:top-24">
+            <div className="bg-[#FFFBF0] border border-[#C5A880]/30 p-8 text-center rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.06)]">
+              <div className="w-[110px] h-[110px] mx-auto rounded-full bg-[#0A1628] text-[#E9C46A] flex items-center justify-center text-[36px] font-bold font-serif-luxury ring-4 ring-[#C5A880]/30">
+                {founder.initials}
+              </div>
+              <h2 className="font-serif-luxury text-[26px] font-bold leading-tight mt-5">{founder.name}</h2>
+              <p className="text-[13px] font-semibold text-[#C5A880] mt-1">{founder.role}</p>
+              <p className="text-[13px] text-slate-600 leading-relaxed mt-4">{founder.shortBio}</p>
+
+              <div className="flex flex-wrap justify-center gap-2 mt-5">
+                {["FCA, ICAN", "PhD Banking & Finance", "MBA", "ANIM", "ACTI"].map(c => (
+                  <span key={c} className="text-[11px] font-semibold bg-white border rounded-full px-3 py-1">{c}</span>
+                ))}
+              </div>
+
+              <div className="bg-[#0A1628] text-white p-4 mt-6 text-left flex gap-3 rounded-2xl">
+                <Award className="text-[#E9C46A] shrink-0" size={20} />
+                <p className="text-[13px] leading-relaxed">{founder.highlight}</p>
+              </div>
+
+              <Link to="/contact" className="mt-6 bg-[#0A1628] text-white w-full py-3.5 text-[13px] font-semibold flex items-center justify-center gap-2 hover:bg-[#C5A880] hover:text-black transition rounded-full">
+                Work With Dr. Okorie <ArrowRight size={15} />
+              </Link>
             </div>
           </div>
 
-          <p className="text-[12px] text-slate-500 mt-4">{founder.creds}</p>
-          <p className="text-[14px] text-slate-600 leading-relaxed mt-3 flex-1">{founder.bio}</p>
-
-          <div className="bg-[#FFFBF0] p-4 mt-4 flex gap-2">
-            <Award size={18} className="text-[#C5A880] shrink-0" />
-            <p className="text-[13px] font-medium">{founder.highlight}</p>
-          </div>
-
-          {founder.email && (
-            <a href={`mailto:${founder.email}`} className="mt-4 text-[13px] font-bold flex items-center gap-2 text-[#0A1628]">
-              <Mail size={15} /> {founder.email}
-            </a>
-          )}
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="max-w-7xl mx-auto px-6 pb-14">
-        <div className="bg-[#0A1628] md:rounded-full text-white p-7 flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
+          {/* RIGHT — STORY */}
           <div>
-            <h3 className="font-serif-luxury text-[24px] font-bold">Work with the founder directly.</h3>
-            <p className="text-slate-300 text-[14px] mt-1">Quick founder response — no layers, no hand-offs.</p>
+            <h3 className="font-serif-luxury text-[28px] font-bold">The Founder's Profile</h3>
+            <div className="space-y-5 mt-5">
+              {founder.story.map((p, i) => (
+                <p key={i} className="text-[15px] leading-[1.85] text-slate-700">{p}</p>
+              ))}
+            </div>
+
+            {/* EDUCATION + CAREER — ROUNDED CARDS */}
+            <div className="grid md:grid-cols-2 gap-6 mt-10">
+              <div className="border p-6 rounded-2xl bg-white shadow-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 bg-[#FFFBF0] rounded-full flex items-center justify-center">
+                    <GraduationCap className="text-[#C5A880]" size={18} />
+                  </div>
+                  <h4 className="font-bold text-[15px]">Education</h4>
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {founder.education.map(e => (
+                    <li key={e} className="text-[14px] text-slate-700 leading-relaxed flex gap-2">
+                      <span className="text-[#C5A880] font-bold">—</span> {e}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="border p-6 rounded-2xl bg-white shadow-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 bg-[#FFFBF0] rounded-full flex items-center justify-center">
+                    <Briefcase className="text-[#C5A880]" size={18} />
+                  </div>
+                  <h4 className="font-bold text-[15px]">Career</h4>
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {founder.career.map(c => (
+                    <li key={c} className="text-[14px] text-slate-700 leading-relaxed flex gap-2">
+                      <span className="text-[#C5A880] font-bold">—</span> {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* BOARD APPRAISALS — ROUNDED PILLS */}
+            <div className="mt-10">
+              <h4 className="font-bold text-[17px]">Board Appraisal & Corporate Governance Reviews Led</h4>
+              <p className="text-[13px] text-slate-500 mt-1">In a team leadership capacity at J.K. Randle International and Noble Edge.</p>
+              <div className="grid sm:grid-cols-2 gap-3 mt-5">
+                {founder.boards.map(b => (
+                  <div key={b} className="bg-[#FFFBF0] border border-[#C5A880]/20 px-4 py-3.5 text-[13.5px] font-medium text-slate-700 rounded-xl">
+                    {b}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA — ROUNDED */}
+            <div className="bg-[#0A1628] text-white p-8 mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 rounded-[24px]">
+              <div>
+                <h4 className="font-serif-luxury text-[24px] font-bold">Have a board, audit or strategy question?</h4>
+                <p className="text-[13px] text-slate-300 mt-1">Start with a confidential consultation.</p>
+              </div>
+              <Link to="/contact" className="bg-[#E9C46A] text-black px-6 py-3 text-[13px] font-semibold flex items-center gap-2 shrink-0 hover:bg-white transition rounded-full">
+                <Mail size={15} /> Book a Consultation
+              </Link>
+            </div>
           </div>
-          <Link to="/contact">
-            <button className="bg-[#E9C46A] text-black px-5 py-3 text-[13px] font-semibold rounded-full hover:bg-white hover:scale-105 hover:cursor-pointer duration-200">Book a Consultation</button>
-          </Link>
         </div>
       </div>
     </div>
